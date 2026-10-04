@@ -52,12 +52,10 @@ function AppContent() {
     }
   };
 
-  // Not authenticated - show login
   if (!isAuthenticated) {
     return <LoginPage />;
   }
 
-  // Determine current page for nav highlighting
   const currentPage = pageState.page === 'subject-detail' || pageState.page === 'lesson' 
     ? 'subjects' 
     : pageState.page === 'diagnostic' 
